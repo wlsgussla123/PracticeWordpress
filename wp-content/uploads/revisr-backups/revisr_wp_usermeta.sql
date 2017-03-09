@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS `wp_usermeta`;
+CREATE TABLE `wp_usermeta` (
+  `umeta_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) unsigned NOT NULL DEFAULT '0',
+  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci,
+  PRIMARY KEY (`umeta_id`),
+  KEY `user_id` (`user_id`),
+  KEY `meta_key` (`meta_key`(191))
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+LOCK TABLES `wp_usermeta` WRITE;
+INSERT INTO `wp_usermeta` VALUES ('1','1','nickname','jinhyeon'), ('2','1','first_name',''), ('3','1','last_name',''), ('4','1','description',''), ('5','1','rich_editing','true'), ('6','1','comment_shortcuts','false'), ('7','1','admin_color','fresh'), ('8','1','use_ssl','0'), ('9','1','show_admin_bar_front','true'), ('10','1','locale',''), ('11','1','wp_capabilities','a:1:{s:13:\"administrator\";b:1;}'), ('12','1','wp_user_level','10'), ('13','1','dismissed_wp_pointers',''), ('14','1','default_password_nag',''), ('15','1','show_welcome_panel','1'), ('16','1','session_tokens','a:1:{s:64:\"c923ee25a8377f89fd7fa58e219c0973d1c4854ff2d2932b2986882eac72f5a5\";a:4:{s:10:\"expiration\";i:1489217766;s:2:\"ip\";s:3:\"::1\";s:2:\"ua\";s:113:\"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36\";s:5:\"login\";i:1489044966;}}'), ('17','1','wp_user-settings','libraryContent=browse&editor=html&hidetb=1&mfold=o&siteorigin_panels_setting_tab=general&post_dfw=off'), ('18','1','wp_user-settings-time','1489044965'), ('19','1','wp_dashboard_quick_press_last_post_id','3'), ('20','1','closedpostboxes_dashboard','a:1:{i:0;s:17:\"dashboard_primary\";}'), ('21','1','metaboxhidden_dashboard','a:0:{}'), ('22','1','nav_menu_recently_edited','9'), ('23','1','managenav-menuscolumnshidden','a:5:{i:0;s:11:\"link-target\";i:1;s:11:\"css-classes\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";i:4;s:15:\"title-attribute\";}'), ('24','1','metaboxhidden_nav-menus','a:7:{i:0;s:22:\"add-post-type-services\";i:1;s:23:\"add-post-type-employees\";i:2;s:26:\"add-post-type-testimonials\";i:3;s:21:\"add-post-type-clients\";i:4;s:22:\"add-post-type-projects\";i:5;s:12:\"add-post_tag\";i:6;s:15:\"add-post_format\";}'), ('25','1','closedpostboxes_employees','a:0:{}'), ('26','1','metaboxhidden_employees','a:1:{i:0;s:7:\"slugdiv\";}'), ('27','1','meta-box-order_employees','a:3:{s:4:\"side\";s:34:\"submitdiv,categorydiv,postimagediv\";s:6:\"normal\";s:19:\"postexcerpt,slugdiv\";s:8:\"advanced\";s:20:\"st_employees_metabox\";}'), ('28','1','screen_layout_employees','2');
+UNLOCK TABLES;
